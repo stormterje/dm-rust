@@ -1,0 +1,19 @@
+[package]
+name = "dirwatch-tui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+crossterm = "0.27"
+notify = { version = "6", default-features = false, features = [
+    "macos_kqueue",
+    "macos_fsevent",
+] }
+ratatui = "0.26"
+rayon = "1.10"
+walkdir = "2.5"
+humansize = "2.1"
+time = { version = "0.3", features = ["formatting", "macros"] }
+thousands = "0.2.0"
+chrono = "0.4.42"
